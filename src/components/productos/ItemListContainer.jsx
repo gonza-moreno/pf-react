@@ -1,5 +1,7 @@
-import { React, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getProducts } from "../../mocks/fakeApi";
 import { useParams } from "react-router-dom";
+
 import ItemList from "./ItemList";
 
 const ItemListContainer = ({ greeting }) => {
@@ -8,29 +10,22 @@ const ItemListContainer = ({ greeting }) => {
   const { categoria } = useParams();
 
   useEffect(() => {
-    fetch("src/components/productos/productos.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProductos(data);
+    getProducts()
+      .then((res) => {
+        if (categoria) {
+          setProductos(res.filter((item) => item.categoria === categoria));
+        } else {
+          setProductos(res);
+        }
       })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
-  const catFilter = productos.filter(
-    (producto) => producto.categoria === categoria
-  );
+      .catch((error) => console.log(error));
+  }, [categoria]);
 
   return (
     <main>
       <h2 className="text-center my-3 text-3xl text-bold">{greeting}</h2>
       <div className="flex">
-        {categoria ? (
-          <ItemList productos={catFilter} />
-        ) : (
-          <ItemList productos={productos} />
-        )}
+        <ItemList productos={productos} />
       </div>
     </main>
   );

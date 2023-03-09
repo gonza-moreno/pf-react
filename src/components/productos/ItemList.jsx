@@ -4,16 +4,8 @@ import Item from "./Item";
 const ItemList = ({ productos }) => {
   return (
     <div className="flex flex-wrap">
-      {productos.map(({ titulo, precio, img, descripcion }, i) => {
-        return (
-          <Item
-            titulo={titulo}
-            precio={precio}
-            img={img}
-            descripcion={descripcion}
-            key={i}
-          />
-        );
+      {productos.map((producto, i) => {
+        return <Item producto={producto} key={i} />;
       })}
     </div>
   );

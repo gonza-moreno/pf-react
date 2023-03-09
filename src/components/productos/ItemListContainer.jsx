@@ -2,30 +2,36 @@ import React, { useEffect, useState } from "react";
 import { getProducts } from "../../mocks/fakeApi";
 import { useParams } from "react-router-dom";
 
+import Loader from "../Loader";
 import ItemList from "./ItemList";
 
 const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const { categoria } = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
     getProducts()
-      .then((res) => {
+      .then((productos) => {
         if (categoria) {
-          setProductos(res.filter((item) => item.categoria === categoria));
+          setProductos(
+            productos.filter((prod) => prod.categoria === categoria)
+          );
         } else {
-          setProductos(res);
+          setProductos(productos);
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error))
+      .finally(() => setIsLoading(false));
   }, [categoria]);
 
   return (
     <main>
       <h2 className="text-center my-3 text-3xl text-bold">{greeting}</h2>
       <div className="flex">
-        <ItemList productos={productos} />
+        {isLoading ? <Loader /> : <ItemList productos={productos} />}
       </div>
     </main>
   );

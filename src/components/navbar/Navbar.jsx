@@ -43,7 +43,7 @@ const NavBar = () => {
             return (
               <Link to={`/${link}`} key={i}>
                 <li
-                  className="hover:cursor-pointer text-2xl text-semibold text-right md:mx-2 my-2 hover:text-orange-600 duration-300 "
+                  className="hover:cursor-pointer text-2xl text-semibold text-right md:mx-2 my-2 hover:text-orange-600 duration-300"
                   key={i}
                 >
                   {titulo}
@@ -52,7 +52,9 @@ const NavBar = () => {
             );
           })}
           <Link to={"categorias/guitarras"}>
-            <li>guitarras</li>
+            <li className="hover:cursor-pointer text-2xl text-semibold text-right md:mx-2 my-2 hover:text-orange-600 duration-300">
+              guitarras
+            </li>
           </Link>
         </ul>
         <CartWidget />

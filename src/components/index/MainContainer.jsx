@@ -8,13 +8,13 @@ const MainContainer = () => {
         imgFondo={`bg-[url("../src/assets/images/guitarras.jpg")]`}
         colorFondo="bg-[#8f95d3]"
         textoTitulo="Las mejores guitarras están en MusiShop"
-        link={"/"}
+        link={"/categorias/guitarras"}
       />
       <Hero
         imgFondo={`bg-[url("../src/assets/images/bateria-2.jpg")]`}
         colorFondo="bg-[#7a28cb]"
         textoTitulo="Encontra la bateria de tus sueños!"
-        link={"/"}
+        link={"/categorias/baterias"}
       />
       <Hero
         imgFondo={`bg-[url("../src/assets/images/instrumentos.jpg")]`}

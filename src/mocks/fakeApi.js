@@ -6,7 +6,7 @@ const productos = [
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "guitarras",
-    marca: "fender",
+    marca: "Fender",
     id: "1",
   },
   {
@@ -16,7 +16,7 @@ const productos = [
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "guitarras",
-    marca: "ibanez",
+    marca: "Ibanez",
     id: "2",
   },
   {
@@ -26,7 +26,7 @@ const productos = [
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "guitarras",
-    marca: "ibanez",
+    marca: "Ibanez",
     id: "3",
   },
   {
@@ -36,17 +36,17 @@ const productos = [
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "guitarras",
-    marca: "taylor",
+    marca: "Taylor",
     id: "4",
   },
   {
     titulo: "Bajo",
     precio: 38000,
-    img: "src/assets/images/estudio.jpg",
+    img: "https://images.unsplash.com/photo-1617165162694-9703691c370b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "bajos",
-    marca: "fender",
+    marca: "Fender",
     id: "5",
   },
   {
@@ -56,7 +56,7 @@ const productos = [
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "baterias",
-    marca: "yamaha",
+    marca: "Yamaha",
     id: "6",
   },
   {
@@ -66,7 +66,7 @@ const productos = [
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "baterias",
-    marca: "yamaha",
+    marca: "Yamaha",
     id: "7",
   },
   {
@@ -76,7 +76,7 @@ const productos = [
     descripcion:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     categoria: "guitarras",
-    marca: "fender",
+    marca: "Fender",
     id: "8",
   },
 ];
@@ -90,6 +90,6 @@ export const getProducts = () => {
       } else {
         reject("Hubo un error intente mas tarde");
       }
-    }, 2000);
+    }, 1000);
   });
 };

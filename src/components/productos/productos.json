@@ -1,0 +1,74 @@
+[
+  {
+    "titulo": "Guitarra Eléctrica",
+    "precio": 60000,
+    "img": "src/assets/images/guitarras-2.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "guitarras",
+    "marca": "fender",
+    "id": "1"
+  },
+  {
+    "titulo": "Guitarra Electroacústica",
+    "precio": 56000,
+    "img": "src/assets/images/guitarra-acustica.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "guitarras",
+    "marca": "ibanez",
+    "id": "2"
+  },
+  {
+    "titulo": "Guitarra Española",
+    "precio": 30000,
+    "img": "src/assets/images/estudio.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "guitarras",
+    "marca": "ibanez",
+    "id": "3"
+  },
+  {
+    "titulo": "Guitarra de 12 cuerdas",
+    "precio": 48000,
+    "img": "src/assets/images/guitarras.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "guitarras",
+    "marca": "taylor",
+    "id": "4"
+  },
+  {
+    "titulo": "Bajo",
+    "precio": 38000,
+    "img": "src/assets/images/estudio.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "bajos",
+    "marca": "fender",
+    "id": "5"
+  },
+  {
+    "titulo": "Bateria",
+    "precio": 60000,
+    "img": "src/assets/images/bateria-2.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "baterias",
+    "marca": "yamaha",
+    "id": "6"
+  },
+  {
+    "titulo": "Bateria",
+    "precio": 64000,
+    "img": "src/assets/images/bateria.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "baterias",
+    "marca": "yamaha",
+    "id": "7"
+  },
+  {
+    "titulo": "Guitarra Criolla",
+    "precio": 45000,
+    "img": "src/assets/images/guitarra-acustica.jpg",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoria": "guitarras",
+    "marca": "fender",
+    "id": "8"
+  }
+]

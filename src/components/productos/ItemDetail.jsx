@@ -1,32 +1,39 @@
 import React from "react";
 import ItemCount from "./ItemCount";
-
 const ItemDetail = ({ producto }) => {
-  const { descripcion, marca, precio, titulo, img } = producto;
+  const { descripcion, marca, precio, titulo, img, stock } = producto;
+
   return (
-    <div className="min-w-screen min-h-[90vh] bg-[#EB5E28] p-5 lg:p-10 overflow-hidden relative flex justify-center items-center">
-      <div className="bg-slate-400 flex flex-col md:flex-row md:p-5 md:pl-0 md:max-h-[500px] md:max-w-[1100px] overflow-hidden">
-        <div className="max-h-[300px] w-[100%] sm:max-h-[500px] md:h-[100%] md:w-[50%] overflow-hidden">
-          <img src={img} />
+    <div className="bg-[#e1e6e1] rounded-lg flex flex-col md:flex-row md:pl-0 md:h-[500px] md:max-w-[1100px] ">
+      <div className="max-h-[300px] w-[100%] sm:max-h-[500px] md:w-[50%] overflow-hidden">
+        <img
+          src={img}
+          className="object-cover h-full w-full rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+        />
+      </div>
+      <div className="p-8 flex flex-col justify-around">
+        <div className="text-center md:text-left">
+          <h2 className="text-2xl font-bold">
+            {titulo} - {marca}
+          </h2>
+          <p className="text-xl max-w-xl">{descripcion}</p>
+
+          <p className="text-xl leading-10">
+            Stock: <span className="font-semibold">{stock}</span>
+          </p>
         </div>
 
-        <div className="p-8 flex flex-col justify-around">
-          <div>
-            <h2 className="text-2xl font-bold">
-              {titulo} - {marca}
+        <div className="flex flex-col items-center md:items-start justify-center">
+          <div className="flex flex-col sm:flex-row my-4 justify-between sm:justify-around items-center">
+            <h2 className="p-4 rounded bg-gray-300 text-2xl font-bold my-4">
+              ${precio}
             </h2>
-            <p className="text-xl max-w-xl">{descripcion}</p>
-          </div>
 
-          <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-col sm:flex-row my-4 justify-between sm:justify-around items-center">
-              <h2 className="p-4 rounded bg-gray-300 max-w-max text-2xl font-bold my-4">
-                ${precio}
-              </h2>
-              <button className="font-bold">Agregar al carrito</button>
-            </div>
-            <ItemCount initial={0} />
+            <ItemCount initial={0} stock={stock} />
           </div>
+          <button className="font-bold h-12 w-40 rounded-xl text-white hover:text-black bg-[#7a28cb] hover:bg-[#eb5e28] duration-500 md:self-start">
+            Agregar al carrito
+          </button>
         </div>
       </div>
     </div>

@@ -6,9 +6,9 @@ const Loader = () => {
       <div className="flex justify-center items-center min-h-screen">
         <div
           style={{ borderTopColor: "transparent" }}
-          className="w-8 h-8 border-4 border-blue-200 rounded-full animate-spin"
+          className="w-10 h-10 border-4 border-blue-200 rounded-full animate-spin"
         ></div>
-        <p className="ml-2">cargando...</p>
+        <p className="ml-2 text-xl">cargando...</p>
       </div>
     </div>
   );

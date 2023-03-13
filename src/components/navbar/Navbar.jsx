@@ -19,7 +19,7 @@ const NavBar = () => {
       <div className="flex justify-between">
         <Logo />
         <button
-          className={`md:hidden ${
+          className={`md:hidden border-2 border-black ${
             isOpen ? "bg-[#7a28cb]" : "bg-[#eb5e28]"
           }  rounded-md p-2 duration-300`}
           onClick={() => {
@@ -53,7 +53,7 @@ const NavBar = () => {
           })}
           <Link to={"categorias/guitarras"}>
             <li className="hover:cursor-pointer text-2xl text-semibold text-right md:mx-2 my-2 hover:text-orange-600 duration-300">
-              guitarras
+              Guitarras
             </li>
           </Link>
         </ul>

@@ -30,7 +30,7 @@ const Footer = () => {
       >
         Contacto
       </Link>
-      <div className="flex justify-end my-2 md:my-0 w-[180px]">
+      <div className="flex justify-center md:justify-end my-2 md:my-0 w-[180px]">
         {mediaIcons.map(({ icon, alt, link }, i) => {
           return (
             <Link to={link} target="_blank" key={i} className="mx-2">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ItemCount = ({ initial }) => {
+const ItemCount = ({ initial, stock }) => {
   const [count, setCount] = useState(initial);
   const restar = () => {
     if (count > 0) {
@@ -9,16 +9,18 @@ const ItemCount = ({ initial }) => {
   };
 
   const sumar = () => {
-    setCount(count + 1);
+    if (count < stock) {
+      setCount(count + 1);
+    }
   };
   return (
     <>
-      <div className="max-w-[60%] min-w-[300px] flex justify-around items-center bg-slate-800 rounded-md text-white">
-        <button className="text-8xl" onClick={restar}>
+      <div className="max-w-[300px] min-w-[200px] flex justify-around items-center mx-8 bg-slate-800 rounded-md text-white">
+        <button className="text-6xl" onClick={restar}>
           -
         </button>
-        <span className="text-6xl">{count}</span>
-        <button className="text-6xl" onClick={sumar}>
+        <span className="text-4xl">{count}</span>
+        <button className="text-4xl" onClick={sumar}>
           +
         </button>
       </div>

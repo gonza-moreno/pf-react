@@ -22,10 +22,16 @@ const ProductDetail = () => {
       .finally(() => setIsLoading(false));
   }, [id]);
 
-  console.log(producto);
-
   return (
-    <div>{isLoading ? <Loader /> : <ItemDetail producto={producto} />}</div>
+    <div>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div className="min-w-screen min-h-[90vh] bg-[#EB5E28] p-5 lg:p-10 overflow-hidden relative flex justify-center items-center">
+          <ItemDetail producto={producto} />
+        </div>
+      )}
+    </div>
   );
 };
 

@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import ItemCount from "./ItemCount";
+
+import { ItemCountContext } from "../../context/ItemCountProvider";
+
+import { CartContext } from "../../context/ShoppingCartProvider";
+
 const ItemDetail = ({ producto }) => {
   const { descripcion, marca, precio, titulo, img, stock } = producto;
+
+  const { count } = useContext(ItemCountContext);
+
+  const { handleClick } = useContext(CartContext);
 
   return (
     <div className="bg-[#e1e6e1] rounded-lg flex flex-col md:flex-row md:pl-0 md:h-[500px] md:max-w-[1100px] ">
@@ -29,9 +38,12 @@ const ItemDetail = ({ producto }) => {
               ${precio}
             </h2>
 
-            <ItemCount initial={0} stock={stock} />
+            <ItemCount stock={stock} />
           </div>
-          <button className="font-bold h-12 w-40 rounded-xl text-white hover:text-black bg-[#7a28cb] hover:bg-[#eb5e28] duration-500 md:self-start">
+          <button
+            className="font-bold h-12 w-40 rounded-xl text-white hover:text-black bg-[#7a28cb] hover:bg-[#eb5e28] duration-500 md:self-start"
+            onClick={() => handleClick({ cantidad: count, product: producto })}
+          >
             Agregar al carrito
           </button>
         </div>

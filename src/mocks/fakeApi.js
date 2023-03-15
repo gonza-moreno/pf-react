@@ -9,6 +9,7 @@ const productos = [
     marca: "Fender",
     id: "1",
     stock: 8,
+    cantidad: 1,
   },
   {
     titulo: "Guitarra Electroacústica",
@@ -19,8 +20,8 @@ const productos = [
     categoria: "guitarras",
     marca: "Ibanez",
     id: "2",
-
     stock: 7,
+    cantidad: 1,
   },
   {
     titulo: "Guitarra Española",
@@ -31,8 +32,8 @@ const productos = [
     categoria: "guitarras",
     marca: "Ibanez",
     id: "3",
-
     stock: 8,
+    cantidad: 1,
   },
   {
     titulo: "Guitarra de 12 cuerdas",
@@ -43,8 +44,8 @@ const productos = [
     categoria: "guitarras",
     marca: "Taylor",
     id: "4",
-
     stock: 4,
+    cantidad: 1,
   },
   {
     titulo: "Bajo",
@@ -55,8 +56,8 @@ const productos = [
     categoria: "bajos",
     marca: "Fender",
     id: "5",
-
     stock: 12,
+    cantidad: 1,
   },
   {
     titulo: "Bateria",
@@ -67,8 +68,8 @@ const productos = [
     categoria: "baterias",
     marca: "Yamaha",
     id: "6",
-
     stock: 10,
+    cantidad: 1,
   },
   {
     titulo: "Bateria",
@@ -79,8 +80,8 @@ const productos = [
     categoria: "baterias",
     marca: "Yamaha",
     id: "7",
-
     stock: 3,
+    cantidad: 1,
   },
   {
     titulo: "Guitarra Criolla",
@@ -91,8 +92,8 @@ const productos = [
     categoria: "guitarras",
     marca: "Fender",
     id: "8",
-
     stock: 15,
+    cantidad: 1,
   },
 ];
 

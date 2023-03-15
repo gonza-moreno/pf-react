@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../Loader";
 import ItemDetail from "./ItemDetail";
 import { getProducts } from "../../mocks/fakeApi";
+import ItemCountProvider from "../../context/ItemCountProvider";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -27,9 +28,11 @@ const ProductDetail = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="min-w-screen min-h-[90vh] bg-[#EB5E28] p-5 lg:p-10 overflow-hidden relative flex justify-center items-center">
-          <ItemDetail producto={producto} />
-        </div>
+        <ItemCountProvider>
+          <div className="min-w-screen min-h-[90vh] bg-[#EB5E28] p-5 lg:p-10 overflow-hidden relative flex justify-center items-center">
+            <ItemDetail producto={producto} />
+          </div>
+        </ItemCountProvider>
       )}
     </div>
   );

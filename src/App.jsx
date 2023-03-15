@@ -6,7 +6,7 @@ import MainContainer from "./components/index/MainContainer";
 import NavBar from "./components/navbar/Navbar";
 import Footer from "./components/Footer";
 import AboutContainer from "./components/about/AboutContainer";
-import Cart from "./components/navbar/Cart";
+import Cart from "./components/cart/Cart";
 import ItemDetailContainer from "./components/productos/ItemDetailContainer";
 
 function App() {

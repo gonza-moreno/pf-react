@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { ItemCountContext } from "../../context/ItemCountProvider";
 
-const ItemCount = ({ initial, stock }) => {
-  const [count, setCount] = useState(initial);
+const ItemCount = ({ stock }) => {
+  const { count, setCount } = useContext(ItemCountContext);
+
+  useEffect(() => {
+    setCount(1);
+  }, [stock]);
+
   const restar = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   };

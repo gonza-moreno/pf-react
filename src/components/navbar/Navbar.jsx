@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import CartWidget from "./CartWidget";
+import DropDown from "./DropDown";
 
 import menu from "../../assets/svg/menu.svg";
 import close from "../../assets/svg/close.svg";
@@ -51,11 +52,7 @@ const NavBar = () => {
               </Link>
             );
           })}
-          <Link to={"categorias/guitarras"}>
-            <li className="hover:cursor-pointer text-2xl text-semibold text-right md:mx-2 my-2 hover:text-orange-600 duration-300">
-              Guitarras
-            </li>
-          </Link>
+          <DropDown />
         </ul>
         <CartWidget />
       </div>

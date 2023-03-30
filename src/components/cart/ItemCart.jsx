@@ -30,20 +30,20 @@ const ItemCart = ({ producto }) => {
   return (
     <div
       key={id}
-      className="mx-8 my-4 p-4 bg-[#e1e6e1] flex justify-between shadow-2xl"
+      className="mx-0 sm:mx-8 my-4 p-4 md:px-4 bg-[#e1e6e1] flex flex-col md:flex-row justify-between shadow-2xl"
     >
-      <div className="flex">
+      <div className="flex flex-col md:flex-row justify-center items-center">
         <img
           src={img}
           alt="product image"
-          className="max-h-[120px] rounded-lg"
+          className="max-w-[360px] sm:max-h-[180px] rounded-lg"
         />
-        <h2 className="text-xl font-semibold mx-4 self-start">
+        <h2 className="text-xl font-semibold sm:mx-4 md:self-start">
           {titulo} - {marca}
         </h2>
       </div>
-      <div className="text-lg font-semibold flex">
-        <div className="mx-4 flex flex-col justify-center">
+      <div className="text-lg font-semibold flex flex-col items-center justify-center">
+        <div className="text-center sm:my-2 md:my-0 mx-4 flex flex-col justify-center">
           <span className="my-2">
             ${precio} X {cant}
           </span>

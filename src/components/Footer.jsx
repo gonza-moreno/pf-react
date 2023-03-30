@@ -2,20 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "./navbar/Logo";
 
+import discordIcon from "../assets/svg/social-media/discord.svg";
+import twitterIcon from "../assets/svg/social-media/twitter.svg";
+import instagramIcon from "../assets/svg/social-media/instagram.svg";
+
 const Footer = () => {
   const mediaIcons = [
     {
-      icon: "src/assets/svg/social-media/discord.svg",
+      icon: discordIcon,
       alt: "discord icon",
       link: "https://discord.com",
     },
     {
-      icon: "src/assets/svg/social-media/instagram.svg",
+      icon: instagramIcon,
       alt: "instagram icon",
       link: "https://instagram.com",
     },
     {
-      icon: "src/assets/svg/social-media/twitter.svg",
+      icon: twitterIcon,
       alt: "twitter icon",
       link: "https://twitter.com",
     },

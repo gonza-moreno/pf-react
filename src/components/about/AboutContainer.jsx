@@ -29,7 +29,7 @@ const AboutContainer = () => {
       </section>
 
       <section
-        className={`bg-[url("../src/assets/images/fondo-about2.jpg")] bg-cover bg-center min-h-[120vh] flex items-center justify-start text-center text-white`}
+        className={`bg-[url("../src/assets/images/guitarras-2.jpg")] bg-cover bg-center min-h-[120vh] flex items-center justify-start text-center text-white`}
       >
         <div className="bg-slate-700 p-8 rounded-xl bg-opacity-60 ml-8">
           <h1 className="text-6xl font-bold mb-4">Nuestro equipo</h1>

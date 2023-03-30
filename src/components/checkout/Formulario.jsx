@@ -5,12 +5,9 @@ import { CartContext } from "../../context/ShoppingCartProvider";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-import clipboardCopy from "../../assets/svg/copy.svg";
-
 const Formulario = () => {
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
-  const [orderId, setOrderId] = useState(null);
 
   const { cart, setCart } = useContext(CartContext);
 
@@ -38,8 +35,6 @@ const Formulario = () => {
     e.preventDefault();
 
     addDoc(orderCollection, order).then(({ id }) => {
-      setOrderId(id);
-
       const MySwal = withReactContent(Swal);
 
       MySwal.fire({

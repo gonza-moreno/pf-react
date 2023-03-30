@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import arrowLeft from "../../assets/svg/arrow-left.svg";
+
 const Hero = ({ imgFondo, colorFondo, textoTitulo, link }) => {
   return (
     <section
@@ -14,11 +16,7 @@ const Hero = ({ imgFondo, colorFondo, textoTitulo, link }) => {
       <Link to={link}>
         <button className="rounded bg-[#E1E6E1] p-2 text-3xl font-semibold hover:bg-[#8f95d3] duration-500 flex justify-between">
           {"Ver más"}
-          <img
-            src="src/assets/svg/arrow-left.svg"
-            alt="arrow left icon"
-            className="max-h-10"
-          />
+          <img src={arrowLeft} alt="arrow left icon" className="max-h-10" />
         </button>
       </Link>
     </section>

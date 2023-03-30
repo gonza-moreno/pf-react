@@ -17,7 +17,7 @@ const MainContainer = () => {
         link={"/categorias/baterias"}
       />
       <Hero
-        imgFondo={`bg-[url("../src/assets/images/instrumentos.jpg")]`}
+        imgFondo={`bg-[url("../src/assets/images/estudio.jpg")]`}
         colorFondo="bg-[#1c1c1c]"
         textoTitulo="Todos los instrumentos en un solo lugar"
         link={"/catalogo"}

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Hero = ({ imgFondo, colorFondo, textoTitulo, link }) => {
   return (
-    <div
-      className={`${colorFondo} ${imgFondo} bg-cover bg-center min-h-[100vh] md:min-h-[120vh] max-w-[1600px] mx-auto p-10 flex flex-col justify-evenly md:justify-around items-start`}
+    <section
+      className={`${imgFondo} ${colorFondo} bg-cover bg-center min-h-[100vh] md:min-h-[120vh] max-w-[1600px] mx-auto p-10 flex flex-col justify-evenly md:justify-around items-start`}
     >
       <div className="text-white">
         <h2 className="font-semibold text-6xl my-1 max-w-md">{textoTitulo}</h2>
@@ -21,7 +21,7 @@ const Hero = ({ imgFondo, colorFondo, textoTitulo, link }) => {
           />
         </button>
       </Link>
-    </div>
+    </section>
   );
 };
 

@@ -1,16 +1,8 @@
 import React, { useContext } from "react";
 import ItemCount from "./ItemCount";
 
-import { ItemCountContext } from "../../context/ItemCountProvider";
-
-import { CartContext } from "../../context/ShoppingCartProvider";
-
 const ItemDetail = ({ producto }) => {
   const { descripcion, marca, precio, titulo, img, stock } = producto;
-
-  const { count } = useContext(ItemCountContext);
-
-  const { handleClick } = useContext(CartContext);
 
   return (
     <div className="bg-[#e1e6e1] rounded-lg flex flex-col md:flex-row md:pl-0 md:h-[500px] md:max-w-[1100px] ">
@@ -33,19 +25,11 @@ const ItemDetail = ({ producto }) => {
         </div>
 
         <div className="flex flex-col items-center md:items-start justify-center">
-          <div className="flex flex-col sm:flex-row my-4 justify-between sm:justify-around items-center">
-            <h2 className="p-4 rounded bg-gray-300 text-2xl font-bold my-4">
-              ${precio}
-            </h2>
+          <h2 className="p-4 rounded bg-gray-300 text-2xl font-bold my-4">
+            ${precio}
+          </h2>
 
-            <ItemCount stock={stock} />
-          </div>
-          <button
-            className="font-bold h-12 w-40 rounded-xl text-white hover:text-black bg-[#7a28cb] hover:bg-[#eb5e28] duration-500 md:self-start"
-            onClick={() => handleClick({ cantidad: count, product: producto })}
-          >
-            Agregar al carrito
-          </button>
+          <ItemCount stock={stock} producto={producto} />
         </div>
       </div>
     </div>

@@ -29,7 +29,9 @@ const Item = ({ producto }) => {
           </button>
           <button
             className="flex text-white bg-[#7a28cb] max-w-max p-2 rounded-md hover:bg-[#eb5e28] duration-300"
-            onClick={() => handleClick({ cantidad: 1, product: producto })}
+            onClick={() => {
+              handleClick({ cantidad: 1, product: producto });
+            }}
           >
             <img src={carrito} alt="cart-icon" className="max-w-[20px]" />
             <span>Agregar al carrito</span>

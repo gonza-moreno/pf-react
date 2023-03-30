@@ -6,8 +6,8 @@ import MainContainer from "./components/index/MainContainer";
 import NavBar from "./components/navbar/Navbar";
 import Footer from "./components/Footer";
 import AboutContainer from "./components/about/AboutContainer";
-import Cart from "./components/cart/Cart";
 import ItemDetailContainer from "./components/productos/ItemDetailContainer";
+import CartContainer from "./components/cart/CartContainer";
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
             }
           />
           <Route exact path="/producto/:id" element={<ItemDetailContainer />} />
-          <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/cart" element={<CartContainer />} />
           <Route exact path="/about" element={<AboutContainer />} />
         </Routes>
       </ShoppingCartProvider>

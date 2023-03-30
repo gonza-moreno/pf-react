@@ -1,40 +1,42 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Loader from "../Loader";
+import Loader from "../loaders/Loader";
 import ItemDetail from "./ItemDetail";
-import { getProducts } from "../../mocks/fakeApi";
-import ItemCountProvider from "../../context/ItemCountProvider";
+
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ProductDetail = () => {
   const { id } = useParams();
 
-  const [producto, setProducto] = useState([]);
+  const [producto, setProducto] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
-    getProducts()
-      .then((productos) => {
-        if (id) {
-          setProducto(productos.find((prod) => prod.id === id));
-        }
-      })
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+
+    const db = getFirestore();
+
+    const singleProduct = doc(db, "instrumentos", id);
+
+    getDoc(singleProduct).then((snapshot) => {
+      if (snapshot.exists()) {
+        const doc = snapshot.data();
+
+        setIsLoading(false);
+        setProducto({
+          ...doc,
+          id: id,
+        });
+      }
+    });
   }, [id]);
 
   return (
-    <div>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <ItemCountProvider>
-          <div className="min-w-screen min-h-[90vh] bg-[#EB5E28] p-5 lg:p-10 overflow-hidden relative flex justify-center items-center">
-            <ItemDetail producto={producto} />
-          </div>
-        </ItemCountProvider>
-      )}
-    </div>
+    <>
+      <div className="min-w-screen min-h-[90vh] bg-[#EB5E28] p-5 lg:p-10 overflow-hidden relative flex justify-center items-center">
+        {isLoading ? <Loader /> : <ItemDetail producto={producto} />}
+      </div>
+    </>
   );
 };
 

@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import { getProducts } from "../../mocks/fakeApi";
 import { useParams } from "react-router-dom";
 
-import Loader from "../Loader";
 import ItemList from "./ItemList";
+import Loader from "../loaders/Loader";
+
+import { getFirestore, getDocs, collection } from "firebase/firestore";
 
 const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   const { categoria } = useParams();
 
   useEffect(() => {
-    setIsLoading(true);
     getProducts()
       .then((productos) => {
         if (categoria) {
@@ -23,17 +23,17 @@ const ItemListContainer = ({ greeting }) => {
           setProductos(productos);
         }
       })
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+      .catch((error) => console.log(error));
   }, [categoria]);
 
   return (
-    <main>
-      <h2 className="text-center my-3 text-3xl text-bold">{greeting}</h2>
-      <div className="flex">
-        {isLoading ? <Loader /> : <ItemList productos={productos} />}
-      </div>
-    </main>
+    <>
+      {productos.length === 0 ? (
+        <Loader />
+      ) : (
+        <ItemList productos={productos} greeting={greeting} />
+      )}
+    </>
   );
 };
 

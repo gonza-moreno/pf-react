@@ -4,8 +4,6 @@
 
 Simulación de un E-commerce que comercializa intrumentos músicales. El objetivo del proyecto era desarrollar, en base a React, una página que simule toda la interactividad con el usuario, desde el despliegue de los productos hasta la finalización de la compra.
 
-<img src="https://github.com/GonzaloM10/pf-react/blob/main/public/gifs/pf-react.gif" width="100%"/>
-
 ### Dependencias aplicadas
 
 - Vite (4.1.0): Para inicializar el proyecto.

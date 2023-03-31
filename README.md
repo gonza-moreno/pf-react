@@ -2,9 +2,9 @@
 
 ### Projecto final de Coderhouse.
 
-Simulación de un E-commerce que comercializa intrumentos músicales. El objetivo del proyecto era desarrollar, en base a React, una página interactiva que simule toda la interactividad con el usuario, desde el despliegue de los productos hasta la finalización de la compra.
+Simulación de un E-commerce que comercializa intrumentos músicales. El objetivo del proyecto era desarrollar, en base a React, una página que simule toda la interactividad con el usuario, desde el despliegue de los productos hasta la finalización de la compra.
 
-![alt text](https://github.com/GonzaloM10/pf-react/blob/main/public/gifs/pf-react.gif)
+<img src="https://github.com/GonzaloM10/pf-react/blob/main/public/gifs/pf-react.gif" width="100%"/>
 
 ### Dependencias aplicadas
 
@@ -15,4 +15,4 @@ Simulación de un E-commerce que comercializa intrumentos músicales. El objetiv
 - tailwindcss (3.2.7): Para estilizar el proyecto.
 - firebase (9.18.0): Para la aplicación de firestore para base de datos.
 
-Despliegue en en [Vercel](https://musishop.vercel.app/)
+Despliegue en [Vercel](https://musishop.vercel.app/)

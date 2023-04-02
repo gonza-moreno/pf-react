@@ -4,6 +4,9 @@
 
 Simulación de un E-commerce que comercializa intrumentos músicales. El objetivo del proyecto era desarrollar, en base a React, una página que simule toda la interactividad con el usuario, desde el despliegue de los productos hasta la finalización de la compra.
 
+![Gif](/src/assets/pf-react-gif.gif)
+Para probar la página por tu cuenta, dirigete a [Vercel](https://musishop.vercel.app/)
+
 ### Dependencias aplicadas
 
 - Vite (4.1.0): Para inicializar el proyecto.
@@ -12,5 +15,3 @@ Simulación de un E-commerce que comercializa intrumentos músicales. El objetiv
 - sweetalert2-react-content (5.0.7): Para mostrar alertas suaves y mejorar la experiencia de usuario.
 - tailwindcss (3.2.7): Para estilizar el proyecto.
 - firebase (9.18.0): Para la aplicación de firestore para base de datos.
-
-Despliegue en [Vercel](https://musishop.vercel.app/)

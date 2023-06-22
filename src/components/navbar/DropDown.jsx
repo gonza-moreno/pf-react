@@ -16,7 +16,7 @@ const DropDown = () => {
   return (
     <div className="flex flex-col justify-center text-2xl relative">
       <span
-        className="hover:cursor-pointer z-20 hover:text-orange-600 duration-300 flex items-center"
+        className="hover:cursor-pointer z-20 hover:text-orange-600 flex items-center"
         onClick={handleClick}
       >
         Categorias
